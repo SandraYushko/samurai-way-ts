@@ -11,22 +11,6 @@
 /*grid-gap: 10px;*/
 }
 
-.nav {
-    grid-area: n;
-    background-color: palegreen;
-}
 
-.header {
-    grid-area: h;
-    background-color: darkseagreen;
-}
-.header img {
-    width: 100px;
-}
-.content {
-    grid-area: c;
-    background-color: bisque;
-}
-.content img {
-    width: 100%;
-}
+
+
