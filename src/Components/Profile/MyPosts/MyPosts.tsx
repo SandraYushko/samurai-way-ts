@@ -16,9 +16,9 @@ export const MyPosts = () => {
             </div>
         </div>
         <div className={classes.posts}>
-            <Post />
-            <Post />
-            <Post />
+            <Post message='Hi, how are you?' like={5}/>
+            <Post message="It's my first post" like={3}/>
+            <Post message='3' like={50}/>
         </div>
     </div>
 }
