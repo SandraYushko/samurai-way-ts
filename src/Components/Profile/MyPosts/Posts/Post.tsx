@@ -3,7 +3,7 @@ import classes from './Post.module.css'
 
 type PostPropsStyle={
     message: string;
-    like: number
+    likesCount: number
 }
 
 export const Post = (props: PostPropsStyle) => {
@@ -12,7 +12,7 @@ export const Post = (props: PostPropsStyle) => {
             <img src='https://s8.stc.all.kpcdn.net/afisha/msk/wp-content/uploads/sites/5/2022/04/avatar.jpg'/>
             {props.message}
             <div>
-            <span>{props.like} Like</span>
+            <span>Like</span> {props.likesCount}
             </div>
         </div>
 
