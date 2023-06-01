@@ -6,7 +6,6 @@ import {Profile} from "./Components/Profile/Profile";
 import {Dialogs} from './Components/Dialogs/Dialogs';
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 
-
 function App() {
     return (
         <BrowserRouter>
