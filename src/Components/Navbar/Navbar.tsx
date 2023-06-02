@@ -9,5 +9,6 @@ export const Navbar = () => {
         <div className={classes.item}><NavLink to="/news" className={(navData) =>(navData ? classes.active : classes.item)}>News</NavLink></div>
         <div className={classes.item}><NavLink to="/music" className={(navData) =>(navData ? classes.active : classes.item)}>Music</NavLink></div>
         <div className={classes.item}><NavLink to="/settings" className={(navData) =>(navData ? classes.active : classes.item)}>Settings</NavLink></div>
+
     </nav>
 }
