@@ -7,6 +7,7 @@
     color: white;
     text-decoration: none;
 }
-a.active {
+.item a:active, /*ссылка становится желтой при нажатии на нее на секунду*/
+.item a:focus {  /*ссылка остается желтой пока в фокусе*/
     color: gold;
 }
