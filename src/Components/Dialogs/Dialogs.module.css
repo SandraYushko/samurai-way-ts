@@ -7,10 +7,14 @@
     padding: 10px;
 }
 
-.dialogs .dialogsItems .dialog:active,
-.dialogs .dialogsItems .dialog:focus {
-    color: gold;
+/*.dialogs .dialogsItems .dialog {
+    color: darkslateblue;
+    text-decoration: none;
 }
+.dialogs .dialogsItems .dialog a:active,
+.dialogs .dialogsItems .dialog a:focus {
+    color: gold;
+}*/
 
 .dialogs .messages {
     padding: 10px;
