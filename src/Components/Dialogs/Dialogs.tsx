@@ -30,19 +30,21 @@ export const Dialogs = () => {
         {id:4, name:"Kate"},
         {id:5, name:"Sveta"}
     ]
+    let dialogsElements = dialogsData.map(el => <DialogItem name={el.name} id={el.id}/>)
     let messagesData = [
         {id:1, message:"Hello"},
         {id:2, message:"How are you?"},
         {id:3, message:"Yo"},
     ]
+    let messagesElements = messagesData.map(el => <Message message={el.message}/>)
 
     return (
         <div className={classes.dialogs}>
             <div className={classes.dialogsItems}>
-                {dialogsData.map((el) => {return <DialogItem name={el.name} id={el.id}/>})}
+                {dialogsElements}
             </div>
             <div className={classes.messages}>
-                {messagesData.map((el) => {return  <Message message={el.message}/>})}
+                {messagesElements}
             </div>
         </div>
     )
@@ -50,22 +52,3 @@ export const Dialogs = () => {
 
 
 
-
-
-// return (
-//     <div className={classes.dialogs}>
-//         <div className={classes.dialogsItems}>
-//             <DialogItem name="Sasha" id={1}/>
-//             <DialogItem name="Masha" id={2}/>
-//             <DialogItem name="Dasha" id={3}/>
-//             <DialogItem name="Kate" id={4}/>
-//             <DialogItem name="Sveta" id={5}/>
-//         </div>
-//         <div className={classes.messages}>
-//             <Message message="Hello"/>
-//             <Message message="How are you?"/>
-//             <Message message="Yo"/>
-//         </div>
-//     </div>
-// )
-// }
