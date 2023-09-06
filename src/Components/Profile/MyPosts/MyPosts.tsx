@@ -12,11 +12,6 @@ export type MyPostsPropsType = {
 }
 
 export const MyPosts = (props: MyPostsPropsType) => {
- /*   let postsData = [
-        {id: 1, message: 'Hi, how are you?', likesCount: 5},
-        {id: 2, message: 'It\'s my first post', likesCount: 3},
-        {id: 3, message: '+++', likesCount: 50}
-    ]*/
     let postsElements = props.posts.map(el => <Post message={el.message} likesCount={el.likesCount}/>)
 
     return <div className={classes.postsBlock}>
