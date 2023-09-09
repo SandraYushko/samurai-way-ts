@@ -19,9 +19,9 @@ export type ProfilePagePropsType = {
     posts: Array<PostsPropsType>
 }
 export type SidebarPropsType = {}
-export type RootStatePropsType = {
-    profilePage: ProfilePagePropsType,
-    dialogsPage: DalogsPagePropsType,
+type RootStatePropsType = {
+    profilePage: ProfilePagePropsType
+    dialogsPage: DalogsPagePropsType
     sidebar: SidebarPropsType
 }
 
