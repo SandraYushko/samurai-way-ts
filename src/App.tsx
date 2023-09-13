@@ -8,10 +8,9 @@ import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import {Music} from './Components/Music/Music';
 import {News} from './Components/News/News';
 import {Settings} from './Components/Settings/Settings';
-import state from './redux/state';
+import {MainRootStatePropsType} from './redux/state';
 
-
-const App = () => {
+const App = (props: MainRootStatePropsType) => {
     return (
         <BrowserRouter>
             <div className="app-wrapper">
@@ -19,8 +18,8 @@ const App = () => {
                 <Navbar/>
                 <div className="app-wrapper-content">
                     <Routes>
-                        <Route path='/dialogs/*' element={<Dialogs dialogs={state.dialogsPage.dialogs} messages={state.dialogsPage.messages}/>} />
-                        <Route path='/profile' element={<Profile posts={state.profilePage.posts}/>} />
+                        <Route path='/dialogs/*' element={<Dialogs dialogs={props.state.messagesPage.dialogs} messages={props.state.messagesPage.messages}/>} />
+                        <Route path='/profile' element={<Profile posts={props.state.profilePage.posts}/>} />
                         <Route path='/news' element={<News/>} />
                         <Route path='/music' element={<Music/>} />
                         <Route path='/settings' element={<Settings/>} />

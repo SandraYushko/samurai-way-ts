@@ -11,7 +11,7 @@ export type PostsPropsType = {
     message: string,
     likesCount: number
 }
-export type DalogsPagePropsType = {
+export type MessagesPagePropsType = {
     dialogs: Array<DialogsPropsType>,
     messages: Array<MessagesPropsType>
 }
@@ -19,10 +19,13 @@ export type ProfilePagePropsType = {
     posts: Array<PostsPropsType>
 }
 export type SidebarPropsType = {}
-type RootStatePropsType = {
+export type RootStatePropsType = {
     profilePage: ProfilePagePropsType
-    dialogsPage: DalogsPagePropsType
+    messagesPage: MessagesPagePropsType
     sidebar: SidebarPropsType
+}
+export type MainRootStatePropsType = {
+    state: RootStatePropsType
 }
 
 
@@ -34,7 +37,7 @@ let state: RootStatePropsType = {
             {id: 3, message: '+++', likesCount: 50}
         ]
     },
-    dialogsPage: {
+    messagesPage: {
         dialogs: [
             {id:1, name:"Sasha"},
             {id:2, name:"Masha"},
