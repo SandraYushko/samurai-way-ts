@@ -5,6 +5,7 @@ import {ProfilePagePropsType} from '../../../redux/state';
 
 export const MyPosts = (props: ProfilePagePropsType) => {
     let postsElements = props.posts.map(el => <Post message={el.message} likesCount={el.likesCount} id={el.id}/>)
+    let onClickButtonHandler = () => {alert('hey')}
 
     return <div className={classes.postsBlock}>
         <div><h3>My posts</h3>
@@ -13,7 +14,7 @@ export const MyPosts = (props: ProfilePagePropsType) => {
                     <textarea></textarea>
                 </div>
                 <div>
-                    <button>Add post</button>
+                    <button onClick={ onClickButtonHandler }>Add post</button>
                     <button>Remove</button>
                 </div>
             </div>
