@@ -12,7 +12,6 @@ import {MainRootStatePropsType} from './redux/state';
 
 const App = (props: MainRootStatePropsType) => {
     return (
-        <BrowserRouter>
             <div className="app-wrapper">
                 <Header/>
                 <Navbar/>
@@ -26,7 +25,6 @@ const App = (props: MainRootStatePropsType) => {
                     </Routes>
                 </div>
             </div>
-        </BrowserRouter>
     );
 }
 

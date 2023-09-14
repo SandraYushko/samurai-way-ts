@@ -6,13 +6,15 @@ import {MessagesPagePropsType} from '../../redux/state';
 
 export const Dialogs = (props: MessagesPagePropsType) => {
 
-    let dialogsElements = props.dialogs.map(el => <DialogItem name={el.name} id={el.id}/>)
+    let dialogsElements = props.dialogs.map(el => <DialogItem name={el.name} id={el.id} avatar={el.avatar}/>)
     let messagesElements = props.messages.map(el => <Message message={el.message} id={el.id}/>)
 
     return (
-        <div className={classes.dialogs}>
-            <div className={classes.dialogsItems}>{dialogsElements}</div>
-            <div className={classes.messages}>{messagesElements}</div>
+        <div>
+            <div className={classes.dialogs}>
+                <div className={classes.dialogsItems}>{dialogsElements}</div>
+                <div className={classes.messages}>{messagesElements}</div>
+            </div>
         </div>
     )
 }
