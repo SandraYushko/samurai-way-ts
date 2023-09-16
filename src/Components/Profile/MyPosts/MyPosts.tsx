@@ -1,20 +1,27 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import classes from './MyPosts.module.css'
 import {Post} from './Posts/Post';
 import {ProfilePagePropsType} from '../../../redux/state';
 
 export const MyPosts = (props: ProfilePagePropsType) => {
     let postsElements = props.posts.map(el => <Post message={el.message} likesCount={el.likesCount} id={el.id}/>)
-    let onClickButtonHandler = () => {alert('hey')}
+
+    let newPostElement = useRef<HTMLTextAreaElement>(null);
+
+    const addPost = () => {
+        if (newPostElement.current !== null) {
+            alert(newPostElement.current.value)
+        }
+    }
 
     return <div className={classes.postsBlock}>
         <div><h3>My posts</h3>
             <div>
                 <div>
-                    <textarea></textarea>
+                    <textarea ref={newPostElement}></textarea>
                 </div>
                 <div>
-                    <button onClick={ onClickButtonHandler }>Add post</button>
+                    <button onClick={addPost}>Add post</button>
                     <button>Remove</button>
                 </div>
             </div>

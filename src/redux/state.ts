@@ -4,8 +4,7 @@ export type MessagesPropsType = {
 }
 export type DialogsPropsType = {
     id: number,
-    name: string,
-    avatar: string
+    name: string
 }
 export type PostsPropsType = {
     id: number,
@@ -40,11 +39,11 @@ let state: RootStatePropsType = {
     },
     messagesPage: {
         dialogs: [
-            {id:1, name:"Sasha", avatar: 'https://s8.stc.all.kpcdn.net/afisha/msk/wp-content/uploads/sites/5/2022/04/avatar.jpg'},
-            {id:2, name:"Masha", avatar: 'https://s8.stc.all.kpcdn.net/afisha/msk/wp-content/uploads/sites/5/2022/04/avatar.jpg'},
-            {id:3, name:"Dasha", avatar: 'https://s8.stc.all.kpcdn.net/afisha/msk/wp-content/uploads/sites/5/2022/04/avatar.jpg'},
-            {id:4, name:"Kate", avatar: 'https://s8.stc.all.kpcdn.net/afisha/msk/wp-content/uploads/sites/5/2022/04/avatar.jpg'},
-            {id:5, name:"Svetlana", avatar: 'https://s8.stc.all.kpcdn.net/afisha/msk/wp-content/uploads/sites/5/2022/04/avatar.jpg'}
+            {id:1, name:"Sasha"},
+            {id:2, name:"Masha"},
+            {id:3, name:"Dasha"},
+            {id:4, name:"Kate"},
+            {id:5, name:"Svetlana"}
         ],
         messages: [
             {id:1, message:"Hello"},
